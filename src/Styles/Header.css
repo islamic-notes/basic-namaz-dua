@@ -1,0 +1,40 @@
+.header__section {
+  width: 100vw;
+  height: 72px;
+  background: #f7f7f7;
+  display: grid;
+  place-items: center;
+}
+.header__section .navbar {
+  padding: 0px 24px;
+}
+.ant-modal.navber__modal {
+  width: 100% !important;
+  height: 100vh;
+  top: 0;
+  padding: 0;
+  max-width: 100%;
+}
+.navber__modal .ant-modal-content {
+  height: 100%;
+}
+.navber__treeMenu {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.navber__treeMenu .treeMenu__ul {
+  width: 100% !important;
+  text-align: center;
+  border-right: none;
+}
+.tree__subMenu {
+  text-align: center;
+}
+.menuPage {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding-top: 20px;
+}
