@@ -1,0 +1,45 @@
+[
+    {
+        "label":"Some Content",
+        "content_path":"contents/dua/test-content.md"
+    },
+    {
+        "label":"Surah",
+        "submenu":[
+            {
+                "label":"Surah Fatiha",
+                "content_path":"contents/surah/surah-fatiha.md"
+            },
+            {
+                "label":"Surah Fatiha 2",
+                "content_path":"contents/surah/surah-fatiha.md"
+            },
+            {
+                "label":"Sub of Sub menu",
+                "submenu":[
+                    {
+                        "label":"Sub Surah Fatiha",
+                        "content_path":"contents/surah/surah-fatiha.md"
+                    },
+                    {
+                        "label":"Sub Surah Fatiha 2",
+                        "content_path":"contents/surah/surah-fatiha.md"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "label":"Dua",
+        "submenu":[
+            {
+                "label":"Some Dua 1",
+                "content_path":"contents/surah/surah-fatiha.md"
+            },
+            {
+                "label":"Some Dua 2",
+                "content_path":"contents/surah/not-found.md"
+            }
+        ]
+    }
+]
