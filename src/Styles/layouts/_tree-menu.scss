@@ -1,0 +1,25 @@
+.navber-modal {
+  width: 100% !important;
+  height: 100vh;
+  top: 0;
+  padding: 0;
+  max-width: 100%;
+
+  .ant-modal-content {
+    height: 100%;
+  }
+}
+
+.tree-menu {
+  .ant-menu-inline {
+    border-right: none;
+  }
+  .ant-menu-item {
+    background: #fff;
+    margin: 0 !important;
+  }
+  .ant-menu-submenu-title {
+    background: #fff;
+    margin: 0 !important;
+  }
+}

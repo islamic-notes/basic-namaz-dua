@@ -1,23 +1,23 @@
 import React from 'react';
-import Card from './HomeCard';
+import ContentCard from '../Layouts/ContentCard';
 
-const Home = () => {
+const HomePage = () => {
   return (
-    <div className="home__content">
+    <section className="home-page">
       <div className="container">
-        <Card
+        <ContentCard
           id={1}
           title = "সূরা ইয়াসিন"
           content = "বিসমিল্লাহির রাহমানির রাহিম (পরম করুণাময়, অসীম দয়ালু আল্লাহর নামে শুরু করছি)।"
         />
-        <Card
+        <ContentCard
           id={2}
           title = "সূরা ইখলাস"
           content = "বিসমিল্লাহির রাহমানির রাহিম (পরম করুণাময়, অসীম দয়ালু আল্লাহর নামে শুরু করছি)।"
         />
       </div>
-    </div>
+    </section>
   )
 }
 
-export default Home
+export default HomePage

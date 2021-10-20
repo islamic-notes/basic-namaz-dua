@@ -1,0 +1,9 @@
+/* all styles will go here 
+we can use multi part files and import them here too.
+*/
+@import './general';
+@import './layouts/home';
+@import './layouts/cards';
+@import './layouts/header';
+@import './layouts/footer';
+@import './layouts/tree-menu';

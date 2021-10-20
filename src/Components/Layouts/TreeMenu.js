@@ -1,121 +1,38 @@
 // it's the tree menu
 import React from 'react'
 import {Menu} from 'antd';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-const addPages = [
-  {
-    className: 'treeMenu__li',
-    title: 'Navigation One',
-    key: 'sub1',
-    items: [
-      {
-        className: 'tree__subMenu',
-        key: '1',
-        path: '/menu/page/645656598',
-        name: 'Option 1'
-      },
-      {
-        className: 'tree__subMenu',
-        key: '2',
-        path: '/menu/page/645656599',
-        name: 'Option 2'
-      },
-      {
-        className: 'tree__subMenu',
-        key: '3',
-        path: '/menu/page/645656600',
-        name: 'Option 3'
-      },
-      {
-        className: 'tree__subMenu',
-        key: '4',
-        path: '/menu/page/645656601',
-        name: 'Option 4'
-      }
-    ]
-  },
-  {
-    className: 'treeMenu__li',
-    title: 'Navigation Two',
-    key: 'sub2',
-    items: [
-      {
-        className: 'tree__subMenu',
-        key: '5',
-        path: '/menu/page/645656602',
-        name: 'Option 5'
-      },
-      {
-        className: 'tree__subMenu',
-        key: '6',
-        path: '/menu/page/645656603',
-        name: 'Option 6'
-      },
-      {
-        className: 'tree__subMenu',
-        key: '7',
-        path: '/menu/page/645656604',
-        name: 'Option 7'
-      },
-      {
-        className: 'tree__subMenu',
-        key: '8',
-        path: '/menu/page/645656605',
-        name: 'Option 8'
-      }
-    ]
-  },
-  {
-    className: 'treeMenu__li',
-    title: 'Navigation Three',
-    key: 'sub4',
-    items: [
-      {
-        className: 'tree__subMenu',
-        key: '9',
-        path: '/menu/page/645656606',
-        name: 'Option 9'
-      },
-      {
-        className: 'tree__subMenu',
-        key: '10',
-        path: '/menu/page/645656607',
-        name: 'Option 10'
-      },
-      {
-        className: 'tree__subMenu',
-        key: '11',
-        path: '/menu/page/645656608',
-        name: 'Option 11'
-      },
-      {
-        className: 'tree__subMenu',
-        key: '12',
-        path: '/menu/page/645656609',
-        name: 'Option 12'
-      }
-    ]
-  }
-];
-
-const TreeMenu = ({handle}) => {
+const TreeMenu = () => {
   const { SubMenu } = Menu;
+
   return (
-    <>
-    {addPages.map((pages) => (
-      <SubMenu className={pages.className} key={pages.key} title={pages.title}>
-        {console.log(pages)}
-        {pages.items.map((item) => (
-          <Menu.Item className={item.className} onClick={handle} key={item.key}>
-            <Link to={item.path}>
-              {item.name}
-            </Link>
-          </Menu.Item>
-        ))}
-      </SubMenu>
-    ))}
-    </>
+    <div className="tree-menu">
+      <div className="container">
+        <Menu mode="inline">
+          <SubMenu key="sub1" title="Navigation One">
+              <Menu.Item key="1">Option 1</Menu.Item>
+              <Menu.Item key="2">Option 2</Menu.Item>
+              <Menu.Item key="3">Option 3</Menu.Item>
+              <Menu.Item key="4">Option 4</Menu.Item>
+          </SubMenu>
+          <SubMenu key="sub2" title="Navigation Two">
+            <Menu.Item key="5">Option 5</Menu.Item>
+            <Menu.Item key="6">Option 6</Menu.Item>
+            <SubMenu key="sub3" title="Submenu">
+              <Menu.Item key="7">Option 7</Menu.Item>
+              <Menu.Item key="8">Option 8</Menu.Item>
+            </SubMenu>
+          </SubMenu>
+          <SubMenu key="sub4" title="Navigation Three">
+            <Menu.Item key="9">Option 9</Menu.Item>
+            <Menu.Item key="10">Option 10</Menu.Item>
+            <Menu.Item key="11">Option 11</Menu.Item>
+            <Menu.Item key="12">Option 12</Menu.Item>
+          </SubMenu>
+        </Menu>
+      </div>
+    </div>
   )
 }
 
