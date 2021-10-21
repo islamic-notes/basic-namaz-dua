@@ -10,25 +10,25 @@ const HomePage = () => {
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row" span={6}>
           <ArchiveCard
-            path={base64encode('dua/test-content.md')}
+            path={base64encode('contents/dua/test-content.md')}
             title = "সূরা ইয়াসিন"
           />
         </Col>
         <Col className="gutter-row" span={6}>
           <ArchiveCard
-            path={base64encode('dua/test-content.md')}
+            path={base64encode('contents/dua/test-content.md')}
             title = "সূরা ইখলাস"
           />
         </Col>
         <Col className="gutter-row" span={6}>
           <ArchiveCard
-            path={base64encode('dua/test-content.md')}
+            path={base64encode('contents/dua/test-content.md')}
             title = "সূরা ইয়াসিন"
           />
         </Col>
         <Col className="gutter-row" span={6}>
           <ArchiveCard
-            path={base64encode('dua/test-content.md')}
+            path={base64encode('contents/dua/test-content.md')}
             title = "সূরা ইখলাস"
           />
         </Col>
