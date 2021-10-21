@@ -48,7 +48,7 @@ const Header = () => {
           onCancel={handleCancel} 
           footer={null}
         >
-          <TreeMenu />
+          <TreeMenu handleOk={handleOk} />
         </Modal>
       </div>
     </section>

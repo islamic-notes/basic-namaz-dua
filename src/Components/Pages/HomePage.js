@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'antd';
 import ArchiveCard from '../Layouts/ArchiveCard';
+import { base64encode } from 'nodejs-base64';
 
 const HomePage = () => {
   return (
@@ -9,25 +10,25 @@ const HomePage = () => {
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row" span={6}>
           <ArchiveCard
-            path={1}
+            path={base64encode('dua/test-content.md')}
             title = "সূরা ইয়াসিন"
           />
         </Col>
         <Col className="gutter-row" span={6}>
           <ArchiveCard
-            path={2}
+            path={base64encode('dua/test-content.md')}
             title = "সূরা ইখলাস"
           />
         </Col>
         <Col className="gutter-row" span={6}>
           <ArchiveCard
-            path={1}
+            path={base64encode('dua/test-content.md')}
             title = "সূরা ইয়াসিন"
           />
         </Col>
         <Col className="gutter-row" span={6}>
           <ArchiveCard
-            path={2}
+            path={base64encode('dua/test-content.md')}
             title = "সূরা ইখলাস"
           />
         </Col>

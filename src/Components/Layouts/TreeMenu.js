@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import {Menu} from 'antd';
 import { Link } from 'react-router-dom';
+import { base64encode } from 'nodejs-base64';
 
-const TreeMenu = () => {
+const TreeMenu = ({handleOk}) => {
   const { SubMenu } = Menu;
   const [treeItem, setTreeItem] = useState([]);
 
@@ -23,18 +24,18 @@ const TreeMenu = () => {
             return (
               <>
                 {!list.hasOwnProperty('submenu') ? (
-                  <Menu.Item key={index}><Link to={list.content_path}>{list.label}</Link></Menu.Item>
+                  <Menu.Item key={index} onClick={handleOk}><Link to={`/contents/${base64encode(list.content_path)}`}>{list.label}</Link></Menu.Item>
                 ):(
                   <SubMenu key={index} title={list.label}>
                     {list.submenu.map((subItem, key)=>{
                       return (
                         <>
                           {!subItem.hasOwnProperty('submenu') ? (
-                            <Menu.Item key={key}><Link to={subItem.content_path}>{subItem.label}</Link></Menu.Item>
+                            <Menu.Item key={key} onClick={handleOk}><Link to={`/contents/${base64encode(subItem.content_path)}`}>{subItem.label}</Link></Menu.Item>
                           ):(
                             <SubMenu key={key} title={subItem.label}>
                               {subItem.submenu.map((itemSub, subKey)=>(
-                                <Menu.Item key={subKey}><Link to={itemSub.content_path}>{itemSub.label}</Link></Menu.Item>
+                                <Menu.Item key={subKey} onClick={handleOk}><Link to={`/contents/${base64encode(itemSub.content_path)}`}>{itemSub.label}</Link></Menu.Item>
                               ))}
                             </SubMenu>
                           )}

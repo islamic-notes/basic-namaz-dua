@@ -18,7 +18,7 @@ function App() {
       <Router>
         <Header/>
         <Switch>
-          <Route path="/content/:path">
+          <Route path="/contents/:path">
             <ContentPage />
           </Route>
           <Route path="/">
