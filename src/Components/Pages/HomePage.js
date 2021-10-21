@@ -1,20 +1,37 @@
 import React from 'react';
-import ContentCard from '../Layouts/ContentCard';
+import { Col, Row } from 'antd';
+import ArchiveCard from '../Layouts/ArchiveCard';
 
 const HomePage = () => {
   return (
     <section className="home-page">
       <div className="container">
-        <ContentCard
-          id={1}
-          title = "সূরা ইয়াসিন"
-          content = "বিসমিল্লাহির রাহমানির রাহিম (পরম করুণাময়, অসীম দয়ালু আল্লাহর নামে শুরু করছি)।"
-        />
-        <ContentCard
-          id={2}
-          title = "সূরা ইখলাস"
-          content = "বিসমিল্লাহির রাহমানির রাহিম (পরম করুণাময়, অসীম দয়ালু আল্লাহর নামে শুরু করছি)।"
-        />
+      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+        <Col className="gutter-row" span={6}>
+          <ArchiveCard
+            path={1}
+            title = "সূরা ইয়াসিন"
+          />
+        </Col>
+        <Col className="gutter-row" span={6}>
+          <ArchiveCard
+            path={2}
+            title = "সূরা ইখলাস"
+          />
+        </Col>
+        <Col className="gutter-row" span={6}>
+          <ArchiveCard
+            path={1}
+            title = "সূরা ইয়াসিন"
+          />
+        </Col>
+        <Col className="gutter-row" span={6}>
+          <ArchiveCard
+            path={2}
+            title = "সূরা ইখলাস"
+          />
+        </Col>
+      </Row>
       </div>
     </section>
   )

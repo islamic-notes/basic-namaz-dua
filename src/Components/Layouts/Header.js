@@ -27,7 +27,10 @@ const Header = () => {
         <PageHeader
           className="navbar"
           title={<Link to="/"><img width={40} src="/img/logo.png" alt="Logo" /></Link>}
-          tags={<Switch defaultChecked onChange={darkMode} />}
+          tags={<Switch 
+            defaultChecked 
+            onChange={darkMode} 
+          />}
           extra={[
             <Button 
               type="primary" 
