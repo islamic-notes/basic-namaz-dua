@@ -3,4 +3,28 @@
   display: grid;
   place-items: center;
   padding: 20px 0 0;
+
+  .ant-card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@include responsive(319.5px, 575.5px) {
+  .home-page {
+    padding: 18px 10px 0;
+  }
+}
+
+@include responsive(576.5px, 768.5px) {
+  .home-page {
+    padding: 18px 10px 0;
+  }
+}
+
+@include responsive(769px, 992.5px) {
+  .home-page {
+    padding: 18px 10px 0;
+  }
 }

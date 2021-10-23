@@ -26,16 +26,16 @@ const TreeMenu = ({handleOk}) => {
                 {!list.hasOwnProperty('submenu') ? (
                   <Menu.Item key={index} onClick={handleOk}><Link to={`/contents/${base64encode(list.content_path)}`}>{list.label}</Link></Menu.Item>
                 ):(
-                  <SubMenu key={index} title={list.label}>
+                  <SubMenu key={index += 1} title={list.label}>
                     {list.submenu.map((subItem, key)=>{
                       return (
                         <>
                           {!subItem.hasOwnProperty('submenu') ? (
-                            <Menu.Item key={key} onClick={handleOk}><Link to={`/contents/${base64encode(subItem.content_path)}`}>{subItem.label}</Link></Menu.Item>
+                            <Menu.Item key={key += 2} onClick={handleOk}><Link to={`/contents/${base64encode(subItem.content_path)}`}>{subItem.label}</Link></Menu.Item>
                           ):(
-                            <SubMenu key={key} title={subItem.label}>
+                            <SubMenu key={key += 3} title={subItem.label}>
                               {subItem.submenu.map((itemSub, subKey)=>(
-                                <Menu.Item key={subKey} onClick={handleOk}><Link to={`/contents/${base64encode(itemSub.content_path)}`}>{itemSub.label}</Link></Menu.Item>
+                                <Menu.Item key={subKey += 4} onClick={handleOk}><Link to={`/contents/${base64encode(itemSub.content_path)}`}>{itemSub.label}</Link></Menu.Item>
                               ))}
                             </SubMenu>
                           )}

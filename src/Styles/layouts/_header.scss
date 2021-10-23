@@ -9,3 +9,21 @@
     padding: 0px;
   }
 }
+
+@include responsive(319.5px, 575.5px) {
+  .navbar {
+    padding: 0px 10px !important;
+  }
+}
+
+@include responsive(576.5px, 768.5px) {
+  .navbar {
+    padding: 0px 10px !important;
+  }
+}
+
+@include responsive(769px, 992.5px) {
+  .navbar {
+    padding: 0px 10px !important;
+  }
+}

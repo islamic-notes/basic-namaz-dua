@@ -9,9 +9,9 @@ const ContentPage = () => {
   return (
     <div className="content-Page">
       <div className="container">
-        <p style={{fontWeight: 'bold', paddingTop: '20px'}}>Content Pages Encode : {path}</p>
-        <p style={{fontWeight: 'bold'}}>Content Pages Decode : {base64decode(path)}</p>
-        <ContentCard url={base64decode(path)}/>
+        <p>Content Pages Encode : {path}</p>
+        <p>Content Pages Decode : {base64decode(path)}</p>
+        <ContentCard fileUrl ={base64decode(path)}/>
       </div>
     </div>
   )
