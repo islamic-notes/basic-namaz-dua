@@ -12,7 +12,7 @@ function ContentCard({fileUrl}) {
     .then(text => (
       setContent(text)      
     ))
-    console.log(content)
+    
     // import(process.env.PUBLIC_URL +`./contents/${fileUrl}`)
     // .then(res => {fetch(res.default)
     //   .then(res => res.text())
@@ -25,8 +25,7 @@ function ContentCard({fileUrl}) {
 
   return (
     <Markdown className="content">
-      {/* {content} */}
-      afadf
+      {content}
     </Markdown>
   )
 }
