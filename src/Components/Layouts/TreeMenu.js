@@ -20,22 +20,22 @@ const TreeMenu = ({handleOk}) => {
     <div className="tree-menu">
       <div className="container">
         <Menu mode="inline">
-          {treeItem.map((list, index) => {
+          {treeItem.map((list) => {
             return (
               <>
                 {!list.hasOwnProperty('submenu') ? (
-                  <Menu.Item key={index} onClick={handleOk}><Link to={`/contents/${base64encode(list.content_path)}`}>{list.label}</Link></Menu.Item>
+                  <Menu.Item key={list.key} onClick={handleOk}><Link to={`/contents/${base64encode(list.content_path)}`}>{list.label}</Link></Menu.Item>
                 ):(
-                  <SubMenu key={index += 1} title={list.label}>
-                    {list.submenu.map((subItem, key)=>{
+                  <SubMenu key={list.key} title={list.label}>
+                    {list.submenu.map((subItem)=>{
                       return (
                         <>
                           {!subItem.hasOwnProperty('submenu') ? (
-                            <Menu.Item key={key += 2} onClick={handleOk}><Link to={`/contents/${base64encode(subItem.content_path)}`}>{subItem.label}</Link></Menu.Item>
+                            <Menu.Item key={subItem.key} onClick={handleOk}><Link to={`/contents/${base64encode(subItem.content_path)}`}>{subItem.label}</Link></Menu.Item>
                           ):(
-                            <SubMenu key={key += 3} title={subItem.label}>
-                              {subItem.submenu.map((itemSub, subKey)=>(
-                                <Menu.Item key={subKey += 4} onClick={handleOk}><Link to={`/contents/${base64encode(itemSub.content_path)}`}>{itemSub.label}</Link></Menu.Item>
+                            <SubMenu key={subItem.key} title={subItem.label}>
+                              {subItem.submenu.map((itemSub)=>(
+                                <Menu.Item key={itemSub.key} onClick={handleOk}><Link to={`/contents/${base64encode(itemSub.content_path)}`}>{itemSub.label}</Link></Menu.Item>
                               ))}
                             </SubMenu>
                           )}

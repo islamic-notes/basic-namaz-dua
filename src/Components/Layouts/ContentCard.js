@@ -1,32 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import Markdown from 'markdown-to-jsx';
-// import readMD from '../contents/surah/surah-fatiha.md';
 
 function ContentCard({fileUrl}) {
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    
-    fetch(process.env.PUBLIC_URL +`./contents/${fileUrl}`)
-    .then(response => (response.text()))
+    fetch(`${fileUrl}`)
+    .then(res => res.text())
     .then(text => (
       setContent(text)      
     ))
-    
-    // import(process.env.PUBLIC_URL +`./contents/${fileUrl}`)
-    // .then(res => {fetch(res.default)
-    //   .then(res => res.text())
-    //   .then(res => setContent(res))
-    //   .catch(err => console.log(err));
-    // })
-    // .catch(err => console.log(err));
-
+    .catch(err => { 
+      err.text()
+      .then( errorMessage => {
+        setContent(errorMessage)
+      }) 
+    })
   })
 
   return (
-    <Markdown className="content">
-      {content}
-    </Markdown>
+    <>
+      <Markdown className="content" children={content}></Markdown>
+    </>
   )
 }
 

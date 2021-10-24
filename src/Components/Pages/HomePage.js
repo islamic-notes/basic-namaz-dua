@@ -6,19 +6,19 @@ import { base64encode } from 'nodejs-base64';
 const HomePage = () => {
   const data = [
     {
-      path: base64encode('contents/dua/test-content.md'),
+      path: base64encode('dua/test-content.md'),
       title: "সূরা ইয়াসিন"
     },
     {
-      path: base64encode('contents/dua/test-content.md'),
+      path: base64encode('dua/test-content.md'),
       title: "সূরা ইখলাস"
     },
     {
-      path: base64encode('contents/dua/test-content.md'),
+      path: base64encode('dua/test-content.md'),
       title: "সূরা ইয়াসিন"
     },
     {
-      path: base64encode('contents/dua/test-content.md'),
+      path: base64encode('dua/test-content.md'),
       title: "সূরা ইখলাস"
     }
   ];
