@@ -1,0 +1,28 @@
+@import './responsive';
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
+}
+
+@include responsive(319.5px, 575.5px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@include responsive(576.5px, 768.5px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@include responsive(769px, 992.5px) {
+  .container {
+    width: 100%;
+  }
+}

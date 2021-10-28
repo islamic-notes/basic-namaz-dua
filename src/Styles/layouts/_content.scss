@@ -1,0 +1,27 @@
+.content-Page {
+  padding: 18px 0px 0;
+  p {
+    font-weight: bold;
+  }
+}
+
+@include responsive(319.5px, 575.5px) {
+  .content-Page {
+    padding: 18px 10px 0;
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@include responsive(576.5px, 768.5px) {
+  .content-Page {
+    padding: 18px 10px 0;
+  }
+}
+
+@include responsive(769px, 992.5px) {
+  .content-Page {
+    padding: 18px 10px 0;
+  }
+}

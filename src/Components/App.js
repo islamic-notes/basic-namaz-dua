@@ -6,11 +6,11 @@ import {
   Route
 } from "react-router-dom";
 import Header from './Layouts/Header';
-import Home from './Layouts/Home';
-import Detail from './Layouts/Detail';
-import Pages from './Layouts/Pages';
-import '../Styles/antd.css';
-import '../Styles/App.css';
+import HomePage from './Pages/HomePage';
+import ContentPage from './Pages/ContentPage';
+import '../Styles/libs/libs.scss';
+import '../Styles/app.scss';
+
 
 function App() {
   return (
@@ -18,14 +18,11 @@ function App() {
       <Router>
         <Header/>
         <Switch>
-          <Route path="/menu/page/:pageId">
-            <Pages />
-          </Route>
-          <Route path="/detail/:id">
-            <Detail />
+          <Route path="/contents/:path">
+            <ContentPage />
           </Route>
           <Route path="/">
-            <Home />
+            <HomePage />
           </Route>
         </Switch>
       </Router>

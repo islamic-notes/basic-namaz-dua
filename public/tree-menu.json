@@ -1,44 +1,54 @@
 [
     {
+        "key": "menu1",
         "label":"Some Content",
-        "content_path":"contents/dua/test-content.md"
+        "content_path":"dua/test-content.md"
     },
     {
+        "key": "menu2",
         "label":"Surah",
         "submenu":[
             {
+                "key": "submenu1",
                 "label":"Surah Fatiha",
-                "content_path":"contents/surah/surah-fatiha.md"
+                "content_path":"surah/surah-fatiha.md"
             },
             {
+                "key": "submenu2",
                 "label":"Surah Fatiha 2",
-                "content_path":"contents/surah/surah-fatiha.md"
+                "content_path":"surah/surah-fatiha.md"
             },
             {
+                "key": "submenu3",
                 "label":"Sub of Sub menu",
                 "submenu":[
                     {
+                        "key": "submenu4",
                         "label":"Sub Surah Fatiha",
-                        "content_path":"contents/surah/surah-fatiha.md"
+                        "content_path":"surah/surah-fatiha.md"
                     },
                     {
+                        "key": "submenu5",
                         "label":"Sub Surah Fatiha 2",
-                        "content_path":"contents/surah/surah-fatiha.md"
+                        "content_path":"surah/surah-fatiha.md"
                     }
                 ]
             }
         ]
     },
     {
+        "key": "menu3",
         "label":"Dua",
         "submenu":[
             {
+                "key": "submenu6",
                 "label":"Some Dua 1",
-                "content_path":"contents/surah/surah-fatiha.md"
+                "content_path":"surah/surah-fatiha.md"
             },
             {
+                "key": "submenu7",
                 "label":"Some Dua 2",
-                "content_path":"contents/surah/not-found.md"
+                "content_path":"surah/not-found.md"
             }
         ]
     }
