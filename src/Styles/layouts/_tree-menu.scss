@@ -29,18 +29,18 @@
     margin: 0;
   }
   .ant-modal-content {
-    height: auto !important;
+    height: 100% !important;
   }
 }
 
 @include responsive(576.5px, 768.5px) {
   .ant-modal-content {
-    height: auto !important;
+    height: 100% !important;
   }
 }
 
 @include responsive(769px, 992.5px) {
   .ant-modal-content {
-    height: auto !important;
+    height: 100% !important;
   }
 }

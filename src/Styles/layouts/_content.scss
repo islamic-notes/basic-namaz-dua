@@ -3,6 +3,12 @@
   p {
     font-weight: bold;
   }
+
+  .bookmark-btn {
+    font-size: 25px;
+    text-align: right;
+    color: #ff0000;
+  }
 }
 
 @include responsive(319.5px, 575.5px) {

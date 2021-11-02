@@ -2,8 +2,11 @@ import React from 'react';
 import { List } from 'antd';
 import ArchiveCard from '../Layouts/ArchiveCard';
 import { base64encode } from 'nodejs-base64';
+import { useStateValue } from '../../stateprovider';
 
 const HomePage = () => {
+  const [{basket}] = useStateValue();
+
   const data = [
     {
       path: base64encode('dua/test-content.md'),
@@ -26,6 +29,23 @@ const HomePage = () => {
   return (
     <section className="home-page">
       <div className="container">
+        {basket !== null ? (
+          <List
+            size="large"
+            header={<div>List of Bookmark</div>}
+            bordered
+            style={{marginBottom: '20px'}}
+            dataSource={basket}
+            renderItem={item => <List.Item>{item.path}</List.Item>}
+          />
+        ):(
+          <List
+            size="large"
+            header={<div>List of Bookmark</div>}
+            bordered
+            style={{marginBottom: '20px'}}
+          />
+        )}
         <List
           grid={{ 
             gutter: 12,
