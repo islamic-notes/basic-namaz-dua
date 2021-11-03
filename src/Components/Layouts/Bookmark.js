@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
-import { useStateValue } from '../../stateprovider';
 import {
   HeartFilled,
   HeartOutlined
 } from '@ant-design/icons';
 
 const Bookmark = ({id, path}) => {
-  const [, dispatch] = useStateValue()
   const [bookmark, setBookmark] = useState(false);
 
   const AddBookmark = () => {
     setBookmark(!bookmark);
+    
+    if (localStorage.getItem('data') == null) {
+      localStorage.setItem('data', '[]')
+    }
+
+    let old_data = JSON.parse(localStorage.getItem('data'));
+    old_data.push({id, path});
+
     bookmark ? (
-      dispatch({
-        type: 'REMOVE_BASKET',
-        id: id
-      })
+      console.log('remove')
     ):(
-      dispatch({
-        type: 'ADD_BOOKMARK',
-        basket: [{id, path}]
-      })        
+      localStorage.setItem("data", JSON.stringify(old_data))
     )
   }
 

@@ -2,10 +2,8 @@ import React from 'react';
 import { List } from 'antd';
 import ArchiveCard from '../Layouts/ArchiveCard';
 import { base64encode } from 'nodejs-base64';
-import { useStateValue } from '../../stateprovider';
 
 const HomePage = () => {
-  const [{basket}] = useStateValue();
 
   const data = [
     {
@@ -29,13 +27,14 @@ const HomePage = () => {
   return (
     <section className="home-page">
       <div className="container">
-        {basket !== null ? (
+        {console.log(JSON.parse(localStorage.getItem('data')))}
+        {localStorage.getItem('data') !== null ? (
           <List
             size="large"
             header={<div>List of Bookmark</div>}
             bordered
             style={{marginBottom: '20px'}}
-            dataSource={basket}
+            dataSource={JSON.parse(localStorage.getItem('data'))}
             renderItem={item => <List.Item>{item.path}</List.Item>}
           />
         ):(
