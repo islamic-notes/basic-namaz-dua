@@ -5,7 +5,7 @@ function ContentCard({fileUrl}) {
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    fetch(`${fileUrl}`)
+    fetch(fileUrl)
     .then(res => res.text())
     .then(text => (
       setContent(text)      

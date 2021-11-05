@@ -7,10 +7,12 @@ import {
   PageHeader, 
   Switch
 } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import TreeMenu from './TreeMenu';
 
 const Header = () => {
+  const history = useHistory();
+  let location = useLocation();
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const darkMode = (checked) => {
@@ -24,23 +26,26 @@ const Header = () => {
   return (
     <section className="header">
       <div className="container">
-        <PageHeader
+        {location.pathname === '/' ? (
+          <PageHeader
           className="navbar"
           title={<Link to="/"><img width={40} src="/img/logo.png" alt="Logo" /></Link>}
-          tags={<Switch 
-            defaultChecked 
-            onChange={darkMode} 
-          />}
           extra={[
-            <Button 
-              type="primary" 
-              onClick={showModal} 
-              key="1"
-            >
-              সূচিপত্র
-            </Button>
+            <Switch onChange={darkMode} />,
+            <Button type="primary" onClick={showModal} key="1">সূচিপত্র</Button>
           ]}
         />
+        ) : (
+          <PageHeader
+          className="navbar"
+          onBack={() => history.push('/')}
+          title={<Link to="/"><img width={40} src="/img/logo.png" alt="Logo" /></Link>}
+          extra={[
+            <Switch onChange={darkMode} />,
+            <Button type="primary" onClick={showModal} key="1">সূচিপত্র</Button>
+          ]}
+        />
+        )}
         <Modal
           className="navber-modal"
           visible={isModalVisible} 

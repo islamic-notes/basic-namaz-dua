@@ -18,12 +18,8 @@ function App() {
       <Router>
         <Header/>
         <Switch>
-          <Route path="/contents/:path">
-            <ContentPage />
-          </Route>
-          <Route path="/">
-            <HomePage />
-          </Route>
+          <Route path="/contents/:path" component={ContentPage} />
+          <Route path="/" component={HomePage} />
         </Switch>
       </Router>
     </div>

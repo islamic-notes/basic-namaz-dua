@@ -23,3 +23,24 @@
     margin: 0 !important;
   }
 }
+
+@include responsive(319.5px, 575.5px) {
+  .ant-modal.navber-modal {
+    margin: 0;
+  }
+  .ant-modal-content {
+    height: 100% !important;
+  }
+}
+
+@include responsive(576.5px, 768.5px) {
+  .ant-modal-content {
+    height: 100% !important;
+  }
+}
+
+@include responsive(769px, 992.5px) {
+  .ant-modal-content {
+    height: 100% !important;
+  }
+}
