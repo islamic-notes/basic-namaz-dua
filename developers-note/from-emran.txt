@@ -1,0 +1,28 @@
+* class or id names for CSS selector must be in lowercase and should not contain any symbols other than dash "-". Underscores and numbers should be avoided.
+
+* all directory and files names in PUBLIC, must be in lowercase. spaces must be avoided here.
+
+* proposed react component directory structure in /src/Components:
+Layouts
+    - Header.js
+    - Footer.js
+    - TreeMenu.js
+    - ArchiveCard.js // mainly used in homepage to show multiple content blocks in card.
+    - ContentCard.js // holds the .md file's content here. page title etc should not be in here.
+Pages
+    - HomePage.js
+    - ContentPage.js
+App.js
+
+* proposed scss directory structure in /src/Styles:
+libs
+    - _antd.scss
+libs.scss // imports all scss from libs directory.
+layouts
+    - _header.scss
+    - _footer.scss
+    - _cards.scss // contains all card related styles including ArchiveCard & ContentCard.
+    - _tree-menu.scss
+.... other directories if needed
+_general.scss // other categorized & minor styles should be written here.
+app.scss // imports all other scss files. and it will not contain any style codes.
